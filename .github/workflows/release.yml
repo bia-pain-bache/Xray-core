@@ -64,7 +64,7 @@ jobs:
         # goos: [windows, freebsd, openbsd, linux, darwin]
         goos: [windows, linux, darwin]
         # goarch: [amd64, 386]
-        goarch: [amd64, 386, arm, arm6]
+        goarch: [amd64, 386, arm, arm64]
         patch-assetname: [""]
         exclude:
           # Exclude i386 on darwin
@@ -218,7 +218,7 @@ jobs:
 
       - name: Copy README.md & LICENSE
         run: |
-          mv -f resources/* build_assets
+          # mv -f resources/* build_assets
           # cp ${GITHUB_WORKSPACE}/README.md ./build_assets/README.md
           cp ${GITHUB_WORKSPACE}/LICENSE ./build_assets/LICENSE
 
