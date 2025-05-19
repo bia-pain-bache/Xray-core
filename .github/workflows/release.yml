@@ -226,7 +226,7 @@ jobs:
           cp ${GITHUB_WORKSPACE}/LICENSE ./build_assets/LICENSE
 
       - name: Create ZIP archive
-        if: github.event_name == 'release'
+        # if: github.event_name == 'release'
         shell: bash
         run: |
           pushd build_assets || exit 1
