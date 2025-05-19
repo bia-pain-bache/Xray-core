@@ -1,5 +1,8 @@
 name: Build and Release
 
+env:
+  VERSION: 25.5.16
+
 on:
   workflow_dispatch:
   # release:
@@ -252,7 +255,8 @@ jobs:
         uses: svenstaro/upload-release-action@v2
         # if: github.event_name == 'release'
         with:
+          release_name: Release v${{ env.VERSION }}
+          tag: v${{ env.VERSION }}
           repo_token: ${{ secrets.GITHUB_TOKEN }}
           file: ./Xray-${{ matrix.goos }}-${{ matrix.goarch }}.zip*
-          tag: ${{ github.ref }}
           file_glob: true
