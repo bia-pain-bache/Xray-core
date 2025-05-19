@@ -9,8 +9,8 @@ on:
   #   types: [opened, synchronize, reopened]
 
 jobs:
-  check-assets:
-    runs-on: ubuntu-latest
+  # check-assets:
+  #   runs-on: ubuntu-latest
     # steps:
       # - name: Restore Geodat Cache
       #   uses: actions/cache/restore@v4
